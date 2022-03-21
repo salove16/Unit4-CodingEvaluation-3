@@ -8,8 +8,8 @@ const {register,login}=require("./controllers/authController")
 
 const registerVlaidator=require("./middleware/registerValidator")
 
-
-
+const userController=require("./controllers/user")
+app.use("/user",userController)
 app.use("/register",registerVlaidator,register)
 app.use("/login",login)
 
